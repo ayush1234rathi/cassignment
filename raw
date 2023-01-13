@@ -1,0 +1,1442 @@
+        
+1–
+#include <stdio.h>
+int main()
+{
+int num1, num2;
+int sum, sub, mult, mod;
+float div;
+printf("Enter any two numbers: ");
+scanf("%d%d", &num1, &num2);
+sum = num1 + num2;
+sub = num1 - num2;
+mult = num1 * num2; 
+div = (float)num1 / num2;
+mod = num1 % num2;
+printf("SUM = %d\n", sum);
+printf("DIFFERENCE = %d\n", sub);
+printf("PRODUCT = %d\n", mult);
+printf("QUOTIENT = %f\n", div);
+printf("MODULUS = %d", mod);
+return 0;
+}
+ 
+2
+–
+#include <stdio.h>
+int main()
+{
+
+float base, height, area;
+printf("Enter base of the triangle: ");
+scanf("%f", &base);
+printf("Enter height of the triangle: ");
+scanf("%f", &height);
+area = (base * height) / 2; 
+printf("Area of the triangle = %.2f sq. units", area);
+return 0; 
+}
+ 
+3–
+#include <stdio.h>
+int main()
+{
+int a, b, c;
+printf("Enter two angles of triangle: ");
+scanf("%d%d", &a, &b);
+c = 180 - (a + b);
+
+printf("Third angle of the triangle = %d", c);
+return 0; 
+}
+
+ 
+4--
+
+#include <stdio.h>
+int main()
+{
+int days, years, weeks;
+printf("Enter days: ");
+scanf("%d", &days);
+
+years = (days / 365);
+weeks = (days % 365) / 7;
+days = days - ((years * 365) + (weeks * 7));
+printf("YEARS: %d\n", years);
+printf("WEEKS: %d\n", weeks);
+printf("DAYS: %d", days);
+return 0;
+}
+ 
+5–
+#include <stdio.h> #include <math.h> int main() {     int sq,x,pw; 
+    printf("enter the value\n  ");     scanf("%d",&x);     printf("enter the pow\n");     scanf("%d",&pw);     int a=sqrt(x);     int b=pow(x,pw);     printf("THE SQUARE ROOT OF GIVEN NUM IS %d\n THE POWER OF GIVEN NUM IS %d",a,b);     return 0; }  
+ 
+6—
+#include <stdio.h>
+int main()
+{
+float eng, phy, chem, math, comp;
+float total, average, percentage;
+printf("Enter marks of five subjects: :- ");
+scanf("%f%f%f%f%f", &eng, &phy, &chem, &math, &comp);
+total = eng + phy + chem + math + comp;
+average = total / 5.0;
+percentage = (total / 500.0) * 100;
+printf("Total marks = %.2f\n", total);
+printf("Average marks = %.2f\n", average);
+printf("Percentage = %.2f", percentage);
+return 0;
+}
+
+ 
+7–
+#include <stdio.h>
+#define BITS sizeof(int)
+int main()
+{
+int num, msb;
+printf("Enter any number: ");
+scanf("%d", &num);
+msb = 1 << (BITS - 1);
+if(num & msb)
+printf("MSB of %d is set (1).", num);
+else
+printf("MSB of %d is unset (0).", num);
+return 0;
+}
+
+ 
+8–
+#include <stdio.h>
+int main()
+{
+int var1, var2, temp;
+printf("Enter two integers ");
+scanf("%d%d", &var1, &var2);
+printf("Before SwappingnFirst variable = %d\nSecond variable = %d\n", var1, var2);
+temp = var1;
+var1 = var2;
+var2 = temp;
+printf("After SwappingnFirst variable = %d\nSecond variable = %d\n", var1, var2);
+
+return 0;
+} 
+9—
+#include<stdio.h>
+int main() {
+int a, b, c, max;
+printf("Enter Three Integers\n");
+scanf("%d %d %d", &a, &b, &c);
+max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+printf("Maximum Number is = %d\n", max);
+return 0;
+}
+ —
+10
+#include <stdio.h>
+int main()
+{
+char ch;
+printf("Enter any character: ");
+scanf("%c", &ch);
+if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+{
+printf("'%c' is alphabet.", ch);
+}
+else if(ch >= '0' && ch <= '9')
+{
+printf("'%c' is digit.", ch);
+}
+else
+{
+printf("'%c' is special character.", ch);
+}
+return 0;
+}
+
+ 
+11—
+#include <stdio.h>
+int main()
+{
+int unit;
+float amt, total_amt, sur_charge;
+printf("Enter total units consumed: ");
+scanf("%d", &unit);
+if(unit <= 50)
+{
+amt = unit * 0.50;
+}
+else if(unit <= 150)
+{
+amt = 25 + ((unit-50) * 0.75);
+}
+else if(unit <= 250)
+{
+amt = 100 + ((unit-150) * 1.20);
+}
+else
+{
+amt = 220 + ((unit-250) * 1.50);
+}
+sur_charge = amt * 0.20;
+total_amt = amt + sur_charge;
+printf("Electricity Bill = Rs. %.2f", total_amt);
+return 0;
+}
+
+ 
+12–
+#include<stdio.h>
+int main()
+{
+int week;
+printf("Enter week number(1-7): ");
+scanf("%d", &week);
+switch(week)
+{
+case 1:
+printf("Monday");
+break;
+case 2:
+printf("Tuesday");
+break;
+case 3:
+printf("Wednesday");
+break;
+case 4:
+printf("Thursday");
+break;
+case 5:
+printf("Friday");
+break;
+case 6:
+printf("Saturday");
+break;
+case 7:
+printf("Sunday");
+break;
+default:
+printf("Invalid input! Please enter week number between 1-7.");
+}
+return 0;
+}
+
+ 
+13–
+#include <stdio.h>
+int main()
+{
+char ch;
+printf("Enter any alphabet: ");
+scanf("%c", &ch);
+switch(ch)
+{
+case 'a':
+printf("Vowel");
+break;
+case 'e':
+printf("Vowel");
+break;
+case 'i':
+printf("Vowel");
+break;
+case 'o':
+printf("Vowel");
+break;
+case 'u':
+printf("Vowel");
+break;
+case 'A':
+printf("Vowel");
+break;
+case 'E':
+printf("Vowel");
+break;
+case 'I':
+printf("Vowel");
+break;
+case 'O':
+printf("Vowel");
+break;
+case 'U':
+printf("Vowel");
+break;
+default:
+printf("Consonant");
+}
+return 0;
+}
+
+ 
+14—
+#include <stdio.h>
+int main()
+{
+int num;
+printf("Enter any number: ");
+scanf("%d", &num);
+switch (num > 0)
+{
+case 1:
+printf("%d is positive.", num);
+break;
+case 0:
+switch (num < 0)
+{
+case 1:
+printf("%d is negative.", num);
+break;
+case 0:
+printf("%d is zero.", num);
+break;
+}
+break;
+}
+return 0;
+}
+ 
+15–
+#include<stdio.h>
+int main(){
+int side1, side2, side3;
+printf("Enter sides of triangle:");
+scanf("%d%d%d",&side1,&side2,&side3);
+if(side1 == side2 && side2 == side3)
+printf("Triangle is equilateral");
+else if(side1 == side2 || side2 == side3 || side3 == side1)
+printf("Triangle is isosceles");
+else
+printf("Triangle is scalene");
+return 0;
+}
+
+ 
+16—
+#include <stdio.h>
+int main()
+{
+int i, n, sum=0;
+printf("Enter upper limit: ");
+scanf("%d", &n);
+for(i=1; i<=n; i++)
+{
+sum += i;
+}
+printf("Sum of first %d natural numbers = %d", n, sum);
+return 0;
+}
+
+ 
+17—-
+#include <stdio.h>
+int main()
+{
+int i, n;
+printf("Print all even numbers till: ");
+scanf("%d", &n);
+printf("Even numbers from 1 to n %d are: \n", n);
+for(i=1; i<=n; i++)
+{
+if(i%2 == 0)
+{
+printf("%d\n", i);
+}
+}
+return 0;
+}
+AND
+#include <stdio.h>
+int main()
+{
+int i, n, sum=0;
+printf("Enter upper limit: ");
+scanf("%d", &n);
+for(i=2; i<=n; i+=2)
+{
+sum += i;
+}
+printf("Sum of all even number between 1 to n %d = %d", n, sum);
+return 0;
+}
+
+ 
+18—
+#include <stdio.h>
+int main()
+{
+int i, num;
+printf("Enter number to print table: ");
+scanf("%d", &num);
+for(i=1; i<=10; i++)
+{
+printf("%d * %d = %d\n", num, i, (num*i));
+}
+return 0;
+}
+
+ 
+19—
+#include<stdio.h>
+int main(){
+int x,fact=1,n;
+printf("Enter a number to find factorial: ");
+scanf("%d",&n);
+for(x=1;x<=n;x++)
+fact=fact*x;
+printf("Factorial of %d is: %d",n,fact);
+return 0;
+}
+
+ 
+20—
+#include <stdio.h>
+int main() {
+int n, reversed = 0, remainder, original;
+printf("Enter an integer: ");
+scanf("%d", &n);
+original = n;
+while (n != 0) {
+remainder = n % 10;
+reversed = reversed * 10 + remainder;
+n /= 10;
+}
+if (original == reversed)
+printf("%d is a palindrome.", original);
+else
+printf("%d is not a palindrome.", original);
+return 0;
+}
+
+ 
+21–
+#include <stdio.h>
+#define BASE 10
+int main()
+{
+long long num, n;
+int i, lastDigit;
+int freq[BASE];
+printf("Enter any number: ");
+scanf("%lld", &num);
+for(i=0; i<BASE; i++)
+{
+freq[i] = 0;
+}
+n = num;
+while(n != 0)
+{
+lastDigit = n %10;
+n /= 10;
+freq[lastDigit]++;
+}
+printf("Frequency of each digit in %lld is: \n", num);
+for(i=0; i<BASE; i++)
+{
+printf("Frequency of %d = %d\n", i, freq[i]);
+}
+return 0;
+}
+
+ 
+22—
+#include <stdio.h>
+int main() {
+int a, b, x, y, t, gcd, lcm;
+printf("Enter two integers\n");
+scanf("%d%d", &x, &y);
+a = x;
+b = y;
+while (b != 0) {
+t = b;
+b = a % b;
+a = t;
+}
+gcd = a;
+lcm = (x*y)/gcd;
+printf("Greatest common divisor of %d and %d = %d\n", x, y, gcd);
+printf("Least common multiple of %d and %d = %d\n", x, y, lcm);
+return 0;
+}
+
+ 
+23—
+#include<stdio.h>
+int main(){
+int num,i,count,n;
+printf("Enter max range: ");
+scanf("%d",&n);
+for(num = 1;num<=n;num++){
+count = 0;
+for(i=2;i<=num/2;i++){
+if(num%i==0){
+count++;
+break;
+}
+}
+if(count==0 && num!= 1)
+printf("%d ",num);
+}
+return 0;
+}
+ 
+
+24—-
+#include <stdio.h>
+int main()
+{
+int n;
+int sum=0;
+printf("Enter a number");
+scanf("%d",&n);
+int k=n;
+int r;
+while(k!=0)
+{
+r=k%10;
+int f=fact(r);
+k=k/10;
+sum=sum+f;
+}
+if(sum==n)
+{
+printf("\nNumber is a strong");
+}
+else
+{
+printf("\nNumber is not a strong");
+}
+return 0;
+}
+int fact(int r)
+{
+int mul=1;
+for(int i=1;i<=r;i++)
+{
+mul=mul*i;
+}
+return mul;
+}
+
+ 
+25—
+#include<stdio.h>
+int main()
+{
+int n1=0,n2=1,n3,i,number;
+printf("Enter the number of elements:");
+scanf("%d",&number);
+printf("\n%d %d",n1,n2);
+for(i=2;i<number;++i)
+{
+n3=n1+n2;
+printf(" %d",n3);
+n1=n2;
+n2=n3;
+}
+return 0;
+}
+
+ 
+26—
+#include<stdio.h>
+int main()
+{
+int n,r,sum=0,temp;
+printf("enter the number=");
+scanf("%d",&n);
+temp=n;
+while(n>0)
+{
+r=n%10;
+sum=sum+(r*r*r);
+n=n/10;
+}
+if(temp==sum)
+printf("armstrong number ");
+else
+printf("not armstrong number");
+return 0;
+}
+
+ 
+27—
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int num, rem, sum = 0, i;
+printf("Enter a number\n");
+scanf("%d", &num);
+for(i = 1; i < num; i++)
+{
+rem = num % i;
+if (rem == 0)
+{
+sum = sum + i;
+}
+}
+if (sum == num)
+printf(" it  is a Perfect Number");
+else
+printf("\n  it is not a Perfect Number");
+getch();
+}
+
+ 
+28—
+#include <stdio.h>
+int main()
+{
+int base, exponent;
+long long power = 1;
+int i;
+printf("Enter base: ");
+scanf("%d", &base);
+printf("Enter exponent: ");
+scanf("%d", &exponent);
+for(i=1; i<=exponent; i++)
+{
+power = power * base;
+}
+printf("%d ^ %d = %lld", base, exponent, power);
+return 0;
+}
+
+ 
+29—
+#include <stdio.h>
+int main() {
+char c;
+printf("Enter a character: ");
+scanf("%c", &c);
+printf("ASCII value of %c = %d", c, c);
+return 0;
+}
+
+ 
+30—
+#include <stdio.h>
+int getFactorial(int n);
+int main()
+{
+int row, rows, i, value;
+printf("Enter Number of Rows:");
+scanf("%d", &rows);
+for(row = 0; row < rows; row++)
+{
+for(i = row; i <= rows; i++)
+printf(" ");
+for(i = 0; i <= row; i++)
+{
+value = getFactorial(row)/(getFactorial(i)*getFactorial(row-i));
+printf("%4d", value);
+}
+printf("\n");
+}
+return 0;
+}
+int getFactorial(int N){
+if(N < 0){
+printf("Invalid Input: factorial not defined for \
+negative numbers\n");
+return 0;
+}
+int nFactorial = 1, counter;
+for(counter = 1; counter <= N; counter++){
+nFactorial = nFactorial * counter;
+}
+return nFactorial;
+}
+
+ 
+31—
+#include<stdio.h>
+int main()
+{
+int arr[100], size, i, sum = 0;
+printf("Enter array size=");
+scanf("%d",&size);
+printf("Enter array elements=");
+for(i = 0; i < size; i++)
+scanf("%d",&arr[i]);
+for(i = 0; i < size; i++) sum = sum + arr[i];
+printf("Sum of the array = %d\n",sum);
+return 0;
+}
+
+ 
+32—
+#include<stdio.h>
+int main()
+{
+int i, Size, a[20], b[20];
+printf("\n Please Enter the Array Size \n");
+scanf("%d", &Size);
+printf("\n Please Enter the Array Elements \n");
+for(i = 0; i < Size; i++)
+{
+scanf("%d", &a[i]);
+}
+for(i = 0; i < Size; i++)
+{
+b[i] = a[i];
+}
+printf("\n Elements of Second Array are: \n");
+for(i = 0; i < Size; i++)
+{
+printf("\n Value Inside Array b[%d] = %d", i, b[i]);
+}
+return 0;;
+}
+
+ 
+
+33—
+#include <stdio.h>
+int main()
+{
+int arr[100] = { 0 };
+int i, x, pos, n = 10;
+for (i = 0; i < 10; i++)
+arr[i] = i + 1;
+for (i = 0; i < n; i++)
+printf("%d ", arr[i]);
+printf("\n");
+x = 50;
+pos = 5;
+n++;
+for (i = n - 1; i >= pos; i--)
+arr[i] = arr[i - 1];
+arr[pos - 1] = x;
+for (i = 0; i < n; i++)
+printf("%d ", arr[i]);
+printf("\n");
+return 0;
+}
+
+
+ 
+34—
+#include <stdio.h>
+#define MAX_SIZE 100
+int main()
+{
+int arr[MAX_SIZE];
+int i, size, pos;
+printf("Enter size of the array : ");
+scanf("%d", &size);
+printf("Enter elements in array : ");
+for(i=0; i<size; i++)
+{
+scanf("%d", &arr[i]);
+}
+printf("Enter the element position to delete : ");
+scanf("%d", &pos);
+if(pos < 0 || pos > size)
+{
+printf("Invalid position! Please enter position between 1 to %d", size);
+}
+else
+{
+for(i=pos-1; i<size-1; i++)
+{
+arr[i] = arr[i + 1];
+}
+size--;
+printf("\nElements of array after delete are : ");
+for(i=0; i<size; i++)
+{
+printf("%d\t", arr[i]);
+}
+}
+return 0;
+}
+
+ 
+35—
+#include <stdio.h>
+int main()
+{
+int array[100], search, c, number;
+printf("Enter the number of elements in array\n");
+scanf("%d",&number);
+printf("Enter %d numbers\n", number);
+for ( c = 0 ; c < number ; c++ )
+scanf("%d",&array[c]);
+printf("Enter the number to search\n");
+scanf("%d",&search);
+for ( c = 0 ; c < number ; c++ )
+{
+if ( array[c] == search ) /* if required element found */
+{
+printf("%d is present at location %d.\n", search, c+1);
+break;
+}
+}
+if ( c == number )
+printf("%d is not present in array.\n", search);
+return 0;
+}
+
+ 
+36—
+#include <stdio.h>
+void main()
+{
+int a[100],i,j,n,temp;
+printf ("Enter the number of elements:");
+scanf ("%d",&n);
+printf("Enter the values:");
+for (i=0;i<n;i++){
+scanf("%d",&a[i]);
+}
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(a[i]>a[j])
+{
+temp = a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+printf("Second largest element:%d",a[n-2]);
+}
+ 
+
+37—-
+#include <stdio.h>
+#define MAX_SIZE 100
+int main()
+{
+int arr[MAX_SIZE];
+int i, j, size, count = 0;
+printf("Enter size of the array : ");
+scanf("%d", &size);
+printf("Enter elements in array : ");
+for(i=0; i<size; i++)
+{
+scanf("%d", &arr[i]);
+}
+for(i=0; i<size; i++)
+{
+for(j=i+1; j<size; j++)
+{
+if(arr[i] == arr[j])
+{
+count++;
+break;
+}
+}
+}
+printf("\nTotal number of duplicate elements found in array = %d", count);
+return 0;
+}
+
+ 
+38—
+#include <stdio.h>
+#define SIZE 3
+int main()
+{
+int A[SIZE][SIZE];
+int num, row, col;
+printf("Enter elements in matrix of size %dx%d: \n", SIZE, SIZE);
+for(row=0; row<SIZE; row++)
+{
+for(col=0; col<SIZE; col++)
+{
+scanf("%d", &A[row][col]);
+}
+}
+printf("Enter any number to multiply with matrix A: ");
+scanf("%d", &num);
+for(row=0; row<SIZE; row++)
+{
+for(col=0; col<SIZE; col++)
+{
+A[row][col] = num * A[row][col];
+}
+}
+printf("\nResultant matrix c.A = \n");
+for(row=0; row<SIZE; row++)
+{
+for(col=0; col<SIZE; col++)
+{
+printf("%d ", A[row][col]);
+}
+printf("\n");
+}
+return 0;
+}
+
+ 
+39—
+#include <stdio.h>
+#define SIZE 3
+int main()
+{
+int A[SIZE][SIZE];
+int row, col, sum = 0;
+printf("Enter elements in matrix of size %dx%d: \n", SIZE, SIZE);
+for(row=0; row<SIZE; row++)
+{
+for(col=0; col<SIZE; col++)
+{
+scanf("%d", &A[row][col]);
+}
+}
+for(row=0; row<SIZE; row++)
+{
+sum = sum + A[row][row];
+}
+printf("\nSum of diagonal = %d", sum);
+return 0;
+}
+
+ 
+40–
+#include <stdio.h>
+int main() {
+int a[10][10], transpose[10][10], r, c;
+printf("Enter rows and columns: ");
+scanf("%d %d", &r, &c);
+printf("\nEnter matrix elements:\n");
+for (int i = 0; i < r; ++i)
+for (int j = 0; j < c; ++j) {
+printf("Enter element a%d%d: ", i +1, j +1);
+scanf("%d", &a[i][j]);
+}
+printf("\nEntered matrix: \n");
+for (int i = 0; i < r; ++i)
+for (int j = 0; j < c; ++j) {
+printf("%d ", a[i][j]);
+if (j == c - 1)
+printf("\n");
+}
+for (int i = 0; i < r; ++i)
+for (int j = 0; j < c; ++j) {
+transpose[j][i] = a[i][j];
+}
+printf("\nTranspose of the matrix:\n");
+for (int i = 0; i < c; ++i)
+for (int j = 0; j < r; ++j) {
+printf("%d ", transpose[i][j]);
+if (j == r - 1)
+printf("\n");
+}
+return 0;
+}
+
+ 
+41—
+#include <stdio.h>
+#define SIZE 3
+int main()
+{
+int A[SIZE][SIZE];
+int row, col, isIdentity;
+printf("Enter elements in matrix 3x3: \n");
+for(row=0; row<SIZE; row++)
+{
+for(col=0; col<SIZE; col++)
+{
+scanf("%d", &A[row][col]);
+}
+}
+isIdentity = 1;
+for(row=0; row<SIZE; row++)
+{
+for(col=0; col<SIZE; col++)
+{
+if(row==col && A[row][col]!=1)
+{
+isIdentity = 0;
+}
+else if(row!=col && A[row][col]!=0)
+{
+isIdentity = 0;
+}
+}
+}
+if(isIdentity == 1)
+{
+printf("\nAn Identity Matrix.\n");
+for(row=0; row<SIZE; row++)
+{
+for(col=0; col<SIZE; col++)
+{
+printf("%d ", A[row][col]);
+}
+printf("\n");
+}
+}
+else
+{
+printf("Not Identity Matrix");
+}
+return 0;
+}
+
+ 
+42—-
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+int i, n, j, k;
+printf("Enter the size of the first array: ");
+scanf("%d", &n);
+int arr1[n];
+printf("Enter the elements of the first array: \n");
+for (i = 0; i < n; i++)
+{
+scanf("%d", &arr1[i]);
+}
+printf("Enter the size of the second array: ");
+scanf("%d", &k);
+int arr2[k];
+printf("Enter the elements of the second array: \n");
+for (j = 0; j < k; j++)
+{
+scanf("%d", &arr2[j]);
+}
+int arr3[n + k];
+i = j = 0;
+int in;
+for (in = 0; in < n + k; in ++)
+{
+if (i < n && j < k)
+{
+if (arr1[i] < arr2[j])
+{
+arr3[in] = arr1[i];
+i++;
+}
+else
+{
+arr3[in] = arr2[j];
+j++;
+}
+}
+else if (i < n)
+{
+arr3[in] = arr1[i];
+i++;
+}
+else
+{
+arr3[in] = arr2[j];
+j++;
+}
+}
+printf("The merged array is: \n");
+for (in = 0; in < n + k; in++)
+{
+printf("%d ", arr3[in]);
+}
+printf("\n");
+return 0;
+}
+
+ 
+43—
+#include<stdio.h>
+int main()
+{
+char name[30];
+printf("Enter name: ");
+gets(name); //Function to read string from user.
+printf("Name: ");
+puts(name); //Function to display string.
+return 0;
+}
+
+ 
+44—
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+char str[] = { "abbba" };
+int l = 0;
+int h = strlen(str) - 1;
+while (h > l) {
+if (str[l++] != str[h--]) {
+printf("%s is not a palindrome\n", str);
+return 0;
+}
+}
+printf("%s is a palindrome\n", str);
+return 0;
+}
+
+ 
+45—
+#include <stdio.h>
+int main() {
+char str[1000], ch;
+int count = 0;
+printf("Enter a string: ");
+fgets(str, sizeof(str), stdin);
+printf("Enter a character to find its frequency: ");
+scanf("%c", &ch);
+for (int i = 0; str[i] != '\0'; ++i) {
+if (ch == str[i])
+++count;
+}
+printf("Frequency of %c = %d", ch, count);
+return 0;
+}
+
+ 
+46—-
+#include <stdio.h>
+int main()
+{
+float radius, diameter, circumference, area;
+printf("Enter radius of circle: ");
+scanf("%f", &radius);
+diameter = 2 * radius;
+circumference = 2 * 3.14 * radius;
+area = 3.14 * (radius * radius);
+printf("Diameter of circle = %.2f units \n", diameter);
+printf("Circumference of circle = %.2f units \n", circumference);
+printf("Area of circle = %.2f sq. units ", area);
+return 0;
+}
+
+ 
+47—
+#include <stdio.h>
+#include <math.h>
+int isPrime(int num);
+int isArmstrong(int num);
+int isPerfect(int num);
+int main()
+{
+int num;
+printf("Enter any number: ");
+scanf("%d", &num);
+if(isPrime(num))
+{
+printf("%d is Prime number.\n", num);
+}
+else
+{
+printf("%d is not Prime number.\n", num);
+}
+if(isArmstrong(num))
+{
+printf("%d is Armstrong number.\n", num);
+}
+else
+{
+printf("%d is not Armstrong number.\n", num);
+}
+if(isPerfect(num))
+{
+printf("%d is Perfect number.\n", num);
+}
+else
+{
+printf("%d is not Perfect number.\n", num);
+}
+return 0;
+}
+int isPrime(int num)
+{
+int i;
+for(i=2; i<=num/2; i++)
+{
+if(num%i == 0)
+{
+return 0;
+}
+}
+return 1;
+}
+int isArmstrong(int num)
+{
+int lastDigit, sum, originalNum, digits;
+sum = 0;
+originalNum = num;
+digits = (int) log10(num) + 1;
+while(num > 0)
+{
+lastDigit = num % 10;
+sum = sum + round(pow(lastDigit, digits));
+num = num / 10;
+}
+return (originalNum == sum);
+}
+int isPerfect(int num)
+{
+int i, sum, n;
+sum = 0;
+n = num;
+for(i=1; i<n; i++)
+{
+if(n%i == 0)
+{
+sum += i;
+}
+}
+return (num == sum);
+}
+
+ 
+48—
+#include <stdio.h>
+int main()
+{
+int first, second, *p, *q, sum;
+printf("Enter two integers to add\n");
+scanf("%d%d", &first, &second);
+p = &first;
+q = &second;
+sum = *p + *q;
+printf("Sum of the numbers = %d\n", sum);
+return 0;
+}
+
+ 
+49—
+#include<stdio.h>
+void swap(int *,int *);
+void main( )
+{
+int n1,n2;
+printf("Enter the two numbers to be swapped\n");
+scanf("%d%d",&n1,&n2);
+printf("\nThe values of n1 and n2 in the main function before calling the swap function are
+n1=%d n2=%d",n1,n2);
+swap(&n1,&n2);
+printf("\nThe values of n1 and n2 in the main function after calling the swap function are
+n1=%d n2=%d",n1,n2);
+}
+void swap(int *n1,int *n2)
+{
+int temp;
+temp=*n1;
+*n1=*n2;
+*n2=temp;
+printf("\nThe values of n1 and n2 in the swap function after swapping are n1=%d
+n2=%d",*n1,*n2);
+}
+
+ 
+50–
+#include <stdio.h>
+#define MAX_SIZE 100
+void printArray(int arr[], int size);
+int main()
+{
+int source_arr[MAX_SIZE], dest_arr[MAX_SIZE];
+int size, i;
+int *source_ptr = source_arr;
+int *dest_ptr = dest_arr;
+int *end_ptr;
+printf("Enter size of array: ");
+scanf("%d", &size);
+printf("Enter elements in array: ");
+for (i = 0; i < size; i++)
+{
+scanf("%d", (source_ptr + i));
+}
+end_ptr = &source_arr[size - 1];
+printf("\nSource array before copying: ");
+printArray(source_arr, size);
+printf("\nDestination array before copying: ");
+printArray(dest_arr, size);
+while(source_ptr <= end_ptr)
+{
+*dest_ptr = *source_ptr;
+source_ptr++;
+dest_ptr++;
+}
+printf("\n\nSource array after copying: ");
+printArray(source_arr, size);
+printf("\nDestination array after copying: ");
+printArray(dest_arr, size);
+return 0;
+}
+void printArray(int *arr, int size)
+{
+int i;
+for (i = 0; i < size; i++)
+{
+printf("%d, ", *(arr + i));
+}
+}
+AND
+#include <stdio.h>
+#define MAX_SIZE 100
+void printArr(int *arr, int size);
+int main()
+{
+int arr[MAX_SIZE];
+int size;
+int *left = arr;
+int *right;
+printf("Enter size of array: ");
+scanf("%d", &size);
+right = &arr[size - 1];
+printf("Enter elements in array: ");
+while(left <= right)
+{
+scanf("%d", left++);
+}
+printf("\nArray before reverse: ");
+printArr(arr, size);
+left = arr;
+while(left < right)
+{
+*left ^= *right;
+*right ^= *left;
+*left ^= *right;
+left++;
+right--;
+}
+printf("\nArray after reverse: ");
+printArr(arr, size);
+return 0;
+}
+void printArr(int * arr, int size)
+{
+int * arrEnd = (arr + size - 1);
+while(arr <= arrEnd)
+{
+printf("%d, ", *arr);
+arr++;
+}
+}
+
+
+
+ 
+51—
+#include <stdio.h>
+int main()
+{
+int i, j, N;
+printf("Enter number of rows: ");
+scanf("%d", &N);
+for(i=1; i<=N; i++)
+{
+for(j=1; j<=N; j++)
+{
+printf("*");
+}
+printf("\n");
+}
+return 0;
+}
+
+ 
+52—
+#include <stdio.h>
+int main()
+{
+int i, j, N;
+printf("Enter number of rows: ");
+scanf("%d", &N);
+for(i=1; i<=N; i++)
+{
+for(j=1; j<=N; j++)
+{
+if(i==1 || i==N || j==1 || j==N)
+{
+printf("*");
+}
+else
+{
+printf(" ");
+}
+}
+printf("\n");
+}
+return 0;
+}
+
+ 
+53—
+#include <stdio.h>
+int main()
+{
+int i, j, N;
+printf("Enter number of rows: ");
+scanf("%d", &N);
+for(i=1; i<=N; i++)
+{
+for(j=1; j<=N; j++)
+{
+if(i==1 || i==N || j==1 || j==N || i==j || j==(N - i + 1))
+{
+printf("*");
+}
+else
+{
+printf(" ");
+}
+}
+printf("\n");
+}
+return 0;
+}
+
+ 
+54—
+#include <stdio.h>
+int main()
+{
+int i, j, rows;
+printf("Enter rows: ");
+scanf("%d", &rows);
+for(i=1; i<=rows; i++)
+{
+for(j=1; j<=rows - i; j++)
+{
+printf(" ");
+}
+for(j=1; j<=rows; j++)
+{
+printf("*");
+}
+printf("\n");
+}
+return 0;
+}
+
+ 
+55—-
+#include <stdio.h>
+int main()
+{
+int i, j, rows;
+printf("Enter rows : ");
+scanf("%d", &rows);
+for(i=1; i<=rows; i++)
+{
+for(j=1; j<=rows-i; j++)
+{
+printf(" ");
+}
+for(j=1; j<=rows; j++)
+{
+if(i==1 || i==rows || j==1 || j==rows)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+return 0;
+}
+
+ 
